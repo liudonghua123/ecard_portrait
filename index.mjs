@@ -76,6 +76,16 @@ app.get('/ecard_portraits', cas.ssout('/ecard_portraits'), cas.serviceValidate()
     }
 })
 
+// handle application logouts from the CAS logout page (in the browser)
+app.get('/logout', function(req, res) {
+    if (req.session.destroy) {
+      req.session.destroy();
+    } else {
+      req.session = null;
+    }
+    res.redirect('/');
+  });
+
 app.listen(port, () => {
     console.log(`ecard_portraits app listening on port ${port}`)
 })
