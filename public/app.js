@@ -63,7 +63,7 @@ export default {
             licenseKey: 'gplv3-license',
             menu: '#menu',
             anchors: ['page1', 'page2', 'page3'],
-            sectionsColor: ['#0798ec', '#ff5f45', '#41b883'],
+            // sectionsColor: ['#0798ec', '#ff5f45', '#41b883'],
             afterLoad,
             onLeave,
             css3: true,

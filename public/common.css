@@ -3,6 +3,12 @@
     --animate-delay: 0.5s;
 }
 
+html,
+body {
+    margin: 0;
+    height: 100%;
+}
+
 .lottie {
     height: 30%;
     margin-top: 15%;
@@ -11,4 +17,51 @@
 .info {
     font-size: 1.5em;
     height: 100vh;
+}
+
+.section .content {
+    background-color: rgb(255 230 156 / 60%);
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+    background-image: url("images/001.png");
+    /* opacity: 0.75; */
+    /* 
+    mask-image: linear-gradient(#000, transparent);
+    -webkit-mask-image: linear-gradient(#000, transparent); 
+    */
+    
+    mask-image: linear-gradient(90deg, transparent, #000 15%, #000 85%, transparent 100%);
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 15%, #000 85%, transparent 100%);
+    /*
+    mask-image: url("images/001.png");
+    -webkit-mask-image: url("images/001.png");
+    mask-size: cover;
+    -webkit-mask-size: cover;
+    mask-repeat: no-repeat; 
+    -webkit-mask-repeat: no-repeat;
+    mask-position: center center;
+    -webkit-mask-position: center center;
+    */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.bg-ecard {
+    background-image: url("images/002.png");    
+}
+
+.bg-error {
+    background-image: url("images/003.png");
+}
+
+.bg-index {
+    background-image: url("images/004.png");
+}
+
+.bg-not-found {
+    background-image: url("images/005.png");
 }

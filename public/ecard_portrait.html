@@ -43,56 +43,62 @@
 </head>
 
 <body>
-    <div id="app">
+    <div id="app" class="bg bg-ecard">
         <div>
             <full-page ref="fullpage" :options="options" id="fullpage">
                 <div class="section">
                     <div id="lottie1" class="lottie"></div>
-                    <p id="p11"
-                        class="text-white-50 fs-5 d-flex justify-content-center align-items-center animate__animated">
-                        您的首次消费是<span class="text-info fs-1 align-middle fw-bold">{{info.TERMDATE}}
-                        </span>在<span class="text-info fs-1 align-middle fw-bold">{{info.DEVICENAME}}</span>
-                    </p>
-                    <p id="p12"
-                        class="text-white-50 fs-5 d-flex justify-content-center align-items-center animate__animated">
-                        消费了<span class="text-info fs-1 align-middle fw-bold">{{info.AMOUNT}}</span>元</p>
+                    <div class="content">
+                        <p id="p11"
+                            class="text-black-50 fs-5 d-flex justify-content-center align-items-center animate__animated">
+                            您的首次消费是<span class="text-info fs-1 align-middle fw-bold">{{info.TERMDATE}}
+                            </span>在<span class="text-info fs-1 align-middle fw-bold">{{info.DEVICENAME}}</span>
+                        </p>
+                        <p id="p12"
+                            class="text-black-50 fs-5 d-flex justify-content-center align-items-center animate__animated">
+                            消费了<span class="text-info fs-1 align-middle fw-bold">{{info.AMOUNT}}</span>元</p>
+                    </div>
                 </div>
                 <div class="section">
                     <div id="lottie2" class="lottie"></div>
-                    <p id="p21" v-if="info.SUMAMOUNT"
-                        class="text-white-50 fs-5 d-flex justify-content-center align-items-center animate__animated">
-                        您在校期间总共消费了
-                        <span class="text-info fs-1 align-middle fw-bold">{{info.SUMAMOUNT}} </span>元
-                    </p>
-                    <p id="p21" v-else
-                        class="text-white-50 fs-5 d-flex justify-content-center align-items-center animate__animated">
-                        没有找到您的消费信息，是不是您没有在校期间消费过呢？
-                    </p>
-                    <p id="p21" v-if="info.SUMAMOUNT && info.SUMAMOUNT < 100"
-                        class="text-white-50 fs-5 d-flex justify-content-center align-items-center animate__animated">
-                        您的消费有点少呀，是不是经常在外面吃饭，难道食堂的饭菜不香么？
-                    </p>
+                    <div class="content">
+                        <p id="p21" v-if="info.SUMAMOUNT"
+                            class="text-black-50 fs-5 d-flex justify-content-center align-items-center animate__animated">
+                            您在校期间总共消费了
+                            <span class="text-info fs-1 align-middle fw-bold">{{info.SUMAMOUNT}} </span>元
+                        </p>
+                        <p id="p21" v-else
+                            class="text-black-50 fs-5 d-flex justify-content-center align-items-center animate__animated">
+                            没有找到您的消费信息，是不是您没有在校期间消费过呢？
+                        </p>
+                        <p id="p21" v-if="info.SUMAMOUNT && info.SUMAMOUNT < 100"
+                            class="text-black-50 fs-5 d-flex justify-content-center align-items-center animate__animated">
+                            您的消费有点少呀，是不是经常在外面吃饭，难道食堂的饭菜不香么？
+                        </p>
+                    </div>
                 </div>
                 <div class="section">
                     <div id="lottie3" class="lottie"></div>
-                    <p id="p31" v-if="info.GATE_COUNT"
-                        class="text-white-50 fs-5 d-flex justify-content-center align-items-center animate__animated">
-                        您疫情期间出入校园门禁
-                        <span class="text-info fs-1 align-middle fw-bold">{{info.GATE_COUNT}}</span>次
-                    </p>
-                    <p id="p21" v-else
-                        class="text-white-50 fs-5 d-flex justify-content-center align-items-center animate__animated">
-                        没有找到您的校园门禁信息，是不是您疫情期间一直好好学习没有出入过校园呢？
-                    </p>
-                    <p id="p32" v-if="info.HOTEL_COUNT"
-                        class="text-white-50 fs-5 d-flex justify-content-center align-items-center animate__animated">
-                        您疫情期间出入宿舍门禁
-                        <span class="text-info fs-1 align-middle fw-bold">{{info.HOTEL_COUNT}}</span>次
-                    </p>
-                    <p id="p21" v-else
-                        class="text-white-50 fs-5 d-flex justify-content-center align-items-center animate__animated">
-                        没有找到您的宿舍门禁信息，是不是您没有住校还是进出宿舍忘了刷卡呢？
-                    </p>
+                    <div class="content">
+                        <p id="p31" v-if="info.GATE_COUNT"
+                            class="text-black-50 fs-5 d-flex justify-content-center align-items-center animate__animated">
+                            您疫情期间出入校园门禁
+                            <span class="text-info fs-1 align-middle fw-bold">{{info.GATE_COUNT}}</span>次
+                        </p>
+                        <p id="p21" v-else
+                            class="text-black-50 fs-5 d-flex justify-content-center align-items-center animate__animated">
+                            没有找到您的校园门禁信息，是不是您疫情期间一直好好学习没有出入过校园呢？
+                        </p>
+                        <p id="p32" v-if="info.HOTEL_COUNT"
+                            class="text-black-50 fs-5 d-flex justify-content-center align-items-center animate__animated">
+                            您疫情期间出入宿舍门禁
+                            <span class="text-info fs-1 align-middle fw-bold">{{info.HOTEL_COUNT}}</span>次
+                        </p>
+                        <p id="p21" v-else
+                            class="text-black-50 fs-5 d-flex justify-content-center align-items-center animate__animated">
+                            没有找到您的宿舍门禁信息，是不是您没有住校还是进出宿舍忘了刷卡呢？
+                        </p>
+                    </div>
                 </div>
             </full-page>
         </div>
