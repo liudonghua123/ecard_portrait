@@ -58,13 +58,23 @@ export default {
         }
 
 
+        // see more options on https://github.com/alvarotrigo/fullPage.js#options
         const options = {
             licenseKey: 'gplv3-license',
             menu: '#menu',
             anchors: ['page1', 'page2', 'page3'],
-            sectionsColor: ['#41b883', '#ff5f45', '#0798ec'],
+            sectionsColor: ['#0798ec', '#ff5f45', '#41b883'],
             afterLoad,
             onLeave,
+            css3: true,
+            scrollingSpeed: 700,
+            autoScrolling: true,
+            scrollHorizontally: true,
+            fitToSection: true,
+            fitToSectionDelay: 600,
+            scrollBar: false,
+            easing: 'easeInOutCubic',
+            easingcss3: 'ease',
         }
         let info_data = {
             STUEMPNO: 32020008155,
