@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>ecard_portraits</title>
+    <link href="https://unpkg.com/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/vue-fullpage.js/dist/style.css" rel="stylesheet" />
+    <link href="https://unpkg.com/animate.css/animate.css" rel="stylesheet" />
+    <link href="common.css" rel="stylesheet" />
+    <!--
+        see also https://unpkg.com/browse/lottie-web@5.10.2/build/player/
+        https://unpkg.com/browse/lottie-web@5.10.2/rollup.config.js
+        https://unpkg.com/browse/@lottiefiles/vue-lottie-player@1.1.0/dist/
+    -->
+    <script src="https://unpkg.com/lottie-web/build/player/lottie.min.js"></script>
+    <script type="importmap">
+        {
+            "imports": {
+                "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js",
+                "@popperjs/core": "https://unpkg.com/@popperjs/core@2",
+                "bootstrap": "https://unpkg.com/bootstrap/dist/js/bootstrap.esm.js",
+                "vue-fullpage": "https://unpkg.com/vue-fullpage.js/dist/vue-fullpage.mjs",
+                "lottie-web": "https://unpkg.com/lottie-web/build/player/lottie.min.js",
+                "@lottiefiles/vue-lottie-player": "https://unpkg.com/@lottiefiles/vue-lottie-player@1.1.0/dist/vue-lottie-player.umd.js"
+            }
+        }
+    </script>
+    <script>
+        // save info cookie to localStorage if provided
+        const info_cookie = document.cookie.split('; ').find(row => row.startsWith('info='))
+        if (info_cookie) {
+            console.info(`search cookie info: ${info_cookie}`)
+            try {
+                const info = JSON.parse(info_cookie.split('=')[1])
+                localStorage.setItem('info', JSON.stringify(info))
+            } catch (e) {
+                console.error(e)
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="app">
+        <div>
+            <full-page ref="fullpage" :options="options" id="fullpage">
+                <div class="section">
+                    <div id="lottie1" class="lottie"></div>
+                    <p id="p11"
+                        class="text-white-50 fs-5 d-flex justify-content-center align-items-center animate__animated">
+                        您的首次消费是<span class="text-info fs-1 align-middle fw-bold">{{info.TERMDATE}}
+                        </span>在<span class="text-info fs-1 align-middle fw-bold">{{info.DEVICENAME}}</span>
+                    </p>
+                    <p id="p12"
+                        class="text-white-50 fs-5 d-flex justify-content-center align-items-center animate__animated">
+                        消费了<span class="text-info fs-1 align-middle fw-bold">{{info.AMOUNT}}</span>元</p>
+                </div>
+                <div class="section">
+                    <div id="lottie2" class="lottie"></div>
+                    <p id="p21"
+                        class="text-white-50 fs-5 d-flex justify-content-center align-items-center animate__animated">
+                        您在校期间总共消费了
+                        <span class="text-info fs-1 align-middle fw-bold">{{info.SUMAMOUNT}} </span>元
+                    </p>
+                </div>
+                <div class="section">
+                    <div id="lottie3" class="lottie"></div>
+                    <p id="p31"
+                        class="text-white-50 fs-5 d-flex justify-content-center align-items-center animate__animated">
+                        您在校期间出入校园门禁
+                        <span class="text-info fs-1 align-middle fw-bold">{{info.GATE_COUNT}}</span>次
+                    </p>
+                    <p id="p32"
+                        class="text-white-50 fs-5 d-flex justify-content-center align-items-center animate__animated">
+                        您在校期间出入宿舍门禁
+                        <span class="text-info fs-1 align-middle fw-bold">{{info.HOTEL_COUNT}}</span>次
+                    </p>
+                </div>
+            </full-page>
+        </div>
+
+    </div>
+    <script type="module">
+        import { createApp } from 'vue'
+        import VueFullPage from 'vue-fullpage'
+        import * as bootstrap from 'bootstrap'
+        // lottie-web and @lottiefiles/vue-lottie-player do not provide esm module
+        // import lottie from "lottie-web";
+        // import LottieVuePlayer from "@lottiefiles/vue-lottie-player";
+        console.info(lottie)
+
+        import App from './app.js'
+
+        const app = createApp(App)
+        app.use(VueFullPage)
+        // app.use(LottieVuePlayer);
+        app.mount('#app')
+    </script>
+</body>
+
+</html>

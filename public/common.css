@@ -1,0 +1,14 @@
+:root {
+    --animate-duration: 2000ms;
+    --animate-delay: 0.5s;
+}
+
+.lottie {
+    height: 30%;
+    margin-top: 15%;
+}
+
+.info {
+    font-size: 1.5em;
+    height: 100vh;
+}
