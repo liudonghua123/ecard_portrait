@@ -33,7 +33,7 @@
         if (info_cookie) {
             console.info(`search cookie info: ${info_cookie}`)
             try {
-                const info = JSON.parse(info_cookie.split('=')[1])
+                const info = JSON.parse(decodeURIComponent(info_cookie.split('=')[1]))
                 localStorage.setItem('info', JSON.stringify(info))
             } catch (e) {
                 console.error(e)
