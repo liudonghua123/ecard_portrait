@@ -38,7 +38,7 @@ cas.configure({
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(session({ secret: 'ecard_portraits' }));
+app.use(session({ secret: 'ecard_portrait' }));
 
 
 app.engine('mustache', mustacheExpress());
@@ -52,7 +52,7 @@ app.use(cors({
 
 app.use(express.static('public'))
 
-app.get('/ecard_portraits', cas.ssout('/ecard_portraits'), cas.serviceValidate(), cas.authenticate(), async (req, res) => {
+app.get('/ecard_portrait', cas.ssout('/ecard_portrait'), cas.serviceValidate(), cas.authenticate(), async (req, res) => {
     try {
         if (req.session.cas && req.session.cas.attributes) {
             const { user: uid } = req.session.cas;
@@ -68,7 +68,7 @@ app.get('/ecard_portraits', cas.ssout('/ecard_portraits'), cas.serviceValidate()
             // set info cookie
             console.info(`set info cookie to ${JSON.stringify(info)}`)
             res.cookie('info', JSON.stringify(info), { maxAge: 1000 * 60 * 60 * 24 * 7 });
-            res.sendFile(__dirnameES + '/public/ecard_portraits.html');
+            res.sendFile(__dirnameES + '/public/ecard_portrait.html');
         }
     } catch (error) {
         console.error(error);
@@ -87,5 +87,5 @@ app.get('/logout', function(req, res) {
   });
 
 app.listen(port, () => {
-    console.log(`ecard_portraits app listening on port ${port}`)
+    console.log(`ecard_portrait app listening on port ${port}`)
 })

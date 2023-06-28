@@ -2,7 +2,7 @@
 
 module.exports = {
   apps: [{
-    name: 'ecard_portraits',
+    name: 'ecard_portrait',
     script: 'index.mjs',
     watch: '.',
     log_date_format: "YYYY-MM-DD HH:mm Z",
