@@ -64,8 +64,8 @@ export default {
             menu: '#menu',
             anchors: ['page1', 'page2', 'page3'],
             // sectionsColor: ['#0798ec', '#ff5f45', '#41b883'],
-            afterLoad,
-            onLeave,
+            // afterLoad,
+            // onLeave,
             css3: true,
             scrollingSpeed: 700,
             autoScrolling: true,
@@ -75,6 +75,7 @@ export default {
             scrollBar: false,
             easing: 'easeInOutCubic',
             easingcss3: 'ease',
+            dragAndMove: true,
         }
         let info_data = {
             STUEMPNO: 32020008155,
@@ -107,7 +108,7 @@ export default {
 
     mounted() {
         console.log(this.count) // 0
-        load_lottie()
+        // load_lottie()
     }
 
 }

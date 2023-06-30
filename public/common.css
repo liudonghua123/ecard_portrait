@@ -20,21 +20,22 @@ body {
 }
 
 .section .content {
-    background-color: rgb(255 230 156 / 60%);
+    /* background-color: rgb(255 230 156 / 60%); */
 }
 
 .bg {
     width: 100%;
     height: 100%;
-    background-image: url("images/001.png");
+    background-image: url("images/ynu.jpg");
     /* opacity: 0.75; */
     /* 
     mask-image: linear-gradient(#000, transparent);
     -webkit-mask-image: linear-gradient(#000, transparent); 
     */
-    
+    /*     
     mask-image: linear-gradient(90deg, transparent, #000 15%, #000 85%, transparent 100%);
     -webkit-mask-image: linear-gradient(90deg, transparent, #000 15%, #000 85%, transparent 100%);
+    */
     /*
     mask-image: url("images/001.png");
     -webkit-mask-image: url("images/001.png");
@@ -51,17 +52,50 @@ body {
 }
 
 .bg-ecard {
-    background-image: url("images/002.png");    
+    background-image: url("images/ynu.jpg");    
 }
 
 .bg-error {
-    background-image: url("images/003.png");
+    background-image: url("images/ynu.jpg");
 }
 
 .bg-index {
-    background-image: url("images/004.png");
+    background-image: url("images/ynu.jpg");
 }
 
 .bg-not-found {
-    background-image: url("images/005.png");
+    background-image: url("images/ynu.jpg");
+}
+
+.bg-accompany {
+    background-image: url("images/accompany.jpg");
+}
+
+.bg-farewell {
+    background-image: url("images/farewell.jpg");
+}
+
+.bg-first-insight {
+    background-image: url("images/first-insight.jpg");
+}
+
+/* Use writing-mode with text-orientation to create vertical texts */
+.vertical-rl-upright {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+
+
+.vertical-lr-upright {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+}
+
+.content {
+    margin: 2em;
+}
+
+.content-font {
+    font-family: KaiTi, 'FZFangSong-Z02', 'Microsoft YaHei', serif;
+    font-size: x-large;
 }
