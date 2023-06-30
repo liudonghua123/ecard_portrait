@@ -101,7 +101,10 @@ export default {
             console.log(info_param)
             info_data = { ...info_data, ...JSON.parse(info_param) }
         }
-        console.log(info_data)
+        // update some info
+        // remove POS.* from DEVICENAME
+        info_data.DEVICENAME = info_data.DEVICENAME.replace(/POS.*$/,'')
+        console.log(`finally, use info_data: ${info_data}`)
         let info = ref(info_data)
         return { count, message, options, info }
     },
