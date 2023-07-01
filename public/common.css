@@ -104,3 +104,11 @@ body {
     font-family: 'FZXiaoBiaoSong-B05S', '方正小标宋简体', 'FZXiaoBiaoSong-B05', KaiTi, 'FZFangSong-Z02', 'Microsoft YaHei', serif;
     font-size: x-large;
 }
+
+/* TODO: Need to use some dynamic load method to avoid affecting the loading speed and rendering of the page */
+/*
+@font-face {
+    font-family: 'FZXiaoBiaoSong-B05S';
+    src: url(fonts/FZXBSJW.TTF);
+}
+*/
