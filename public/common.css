@@ -23,6 +23,10 @@ body {
     /* background-color: rgb(255 230 156 / 60%); */
 }
 
+.fullpage-wrapper .fp-table {
+    justify-content: start;
+}
+
 .bg {
     width: 100%;
     height: 100%;
@@ -92,7 +96,8 @@ body {
 }
 
 .content {
-    margin: 2em;
+    margin: 0.5em;
+    line-height: 1;
 }
 
 .content-font {

@@ -52,19 +52,22 @@
                         “每一次品尝美食的旅程<br/>
                         都已成为甜蜜怀念的印记<br/>
                         还记得你第一次去的食堂<br/>
-                        是<span class="">{{info.TERMDATE}}</span>在<span class="">{{info.DEVICENAME}}</span>，消费了<span class="">{{info.AMOUNT}}</span>元”<br/>
+                        是<span class="">{{info.TERMDATE}}</span><br/>
+                        在<span class="">{{info.DEVICENAME}}</span>，消费了<span class="">{{info.AMOUNT}}</span>元”<br/>
                     </p>
                 </div>
                 <div class="section bg bg-farewell">
                     <!-- <div id="lottie2" class="lottie"></div> -->
-                    <p id="p21" class="vertical-rl-upright content content-font animate__animated">
-                        “离开校园<br/>
-                        你会怀念学校的食堂吗<br/>
-                        菜品丰富的自选菜<br/>
-                        夜晚煎炸的小吃<br/>
-                        在校园的短暂岁月，<br/>
-                        你在食堂消费了<span class="text-warning">{{info.SUMAMOUNT}}</span>元”
-                    </p>
+                    <div class="d-flex flex-row-reverse">
+                        <p id="p21" class="vertical-rl-upright content content-font animate__animated">
+                            “离开校园<br/>
+                            你会怀念学校的食堂吗<br/>
+                            菜品丰富的自选菜<br/>
+                            夜晚煎炸的小吃<br/>
+                            在校园的短暂岁月，<br/>
+                            你在食堂消费了<span class="">{{info.SUMAMOUNT}}</span>元”
+                        </p>
+                    </div>
                 </div>
                 <div class="section bg bg-accompany">
                     <!-- <div id="lottie3" class="lottie"></div> -->
@@ -75,9 +78,9 @@
                             都是彼此成长路上的守护<br/>
                             我们记得，疫情期间你”<br/>
                             <span v-if="info.GATE_COUNT">出入校园门禁{{info.GATE_COUNT}}次<br/></span>
-                            <span v-else>没有您的校园门禁信息，是不是一直好好学习没有出入过校园呢？<br/></span>
+                            <span v-else>没找到校园门禁信息，<br/>是不是一直好好学习没有出入过校园呢？<br/></span>
                             <span v-if="info.HOTEL_COUNT">出入宿舍门禁{{info.HOTEL_COUNT}}次<br/></span>
-                            <span v-else>没有您的宿舍门禁信息，是不是没有住校还是进出宿舍忘了刷卡呢？<br/></span>
+                            <span v-else>没找到宿舍门禁信息，<br/>是不是没有住校还是进出宿舍忘了刷卡呢？<br/></span>
                         </p>
                     </div>
                 </div>
