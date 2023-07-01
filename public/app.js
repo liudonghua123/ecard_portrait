@@ -37,7 +37,7 @@ export default {
         const animation = (index) => {
             if (index == 0) {
                 document.querySelector('#p11').classList.toggle('animate__slideInDown');
-                document.querySelector('#p12').classList.toggle('animate__slideInUp');
+                // document.querySelector('#p12').classList.toggle('animate__slideInUp');
             }
             if (index == 1) {
                 document.querySelector('#p21').classList.toggle('animate__fadeInUp');
@@ -45,7 +45,7 @@ export default {
 
             if (index == 2) {
                 document.querySelector('#p31').classList.toggle('animate__zoomIn');
-                document.querySelector('#p32').classList.toggle('animate__zoomInUp');
+                // document.querySelector('#p32').classList.toggle('animate__zoomInUp');
             }
         }
         const afterLoad = (origin, { index }, direction, trigger) => {
@@ -64,8 +64,8 @@ export default {
             menu: '#menu',
             anchors: ['page1', 'page2', 'page3'],
             // sectionsColor: ['#0798ec', '#ff5f45', '#41b883'],
-            // afterLoad,
-            // onLeave,
+            afterLoad,
+            onLeave,
             css3: true,
             scrollingSpeed: 700,
             autoScrolling: true,
